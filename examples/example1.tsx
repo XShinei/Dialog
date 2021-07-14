@@ -1,3 +1,4 @@
+import React from 'react';
 import Dialog from '../lib/Dialog';
 
 const Example = props => {
@@ -14,7 +15,8 @@ const Example = props => {
             title="第一个弹框" 
             onClose={close} 
             onShow={show}
-            // style={{width:500}}
+            visible={true}
+            style={{width: 500}}
         >
             <p>第一个dialog</p>
         </Dialog>

@@ -1,0 +1,67 @@
+.rc-dialog-wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    overflow: hidden;
+    outline: 0;
+}
+
+.rc-dialog {
+    position: relative;
+    margin: 30px auto;
+}
+
+.rc-dialog-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.rc-dialog-content {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    outline: 0;
+}
+
+.rc-dialog-wrap-hidden {
+    display: none;
+}
+
+.rc-dialog-close {
+    float: right;
+    line-height: 1;
+    margin-top: -2px;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    color: #000;
+    opacity: .2;
+    cursor: pointer;
+    filter: alpha(opacity=20);
+    outline: none;
+}
+
+.rc-dialog-close:hover {
+    text-decoration: none;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.rc-dialog-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.rc-dialog-body {
+    padding: 15px;
+    overflow-y: auto;
+}

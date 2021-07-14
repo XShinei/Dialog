@@ -1,18 +1,18 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Mask from './Mask';
+import '../assets/bootstrap.less';
 
 interface DialogProps {
     title: string;
     visible?: boolean;
+    style?: React.CSSProperties;
     onShow?: () => void;
     onClose?: () => void;
 }
 
 const Dialog: React.FC<DialogProps> = props => {
-    const { title, visible, onShow, onClose, children, } = props;
+    const { title, visible, style, onShow, onClose, children, } = props;
     const [internalVisible, setInternalVisible] = useState(visible);
-    const display = visible ? 'block' : 'none';
-    const style = {display: display};
 
     const show = useCallback(() => {
         setInternalVisible(true);
@@ -29,17 +29,17 @@ const Dialog: React.FC<DialogProps> = props => {
     }, [visible, show, hide]);
 
     return (
-        <div className="modal rc-dialog" style={style}>
+        <div className="rc-dialog-wrap">
             <Mask visible={internalVisible}/>
-            <div className="modal-dialog">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <button onClick={hide} type="button" className="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 className="modal-title">{ title }</h4>
+            <div className="rc-dialog" style={style}>
+                <div className="rc-dialog-content">
+                    <div className="rc-dialog-header">
+                        <a tabIndex={0} onClick={hide} className="rc-dialog-close">
+                            <span className="rc-dialog-close-x">x</span>
+                        </a>
+                        <h4 className="rc-dialog-title">{ title }</h4>
                     </div>
-                    <div className="modal-body">{ children }</div>
+                    <div className="rc-dialog-body">{ children }</div>
                 </div>
             </div>
         </div>
