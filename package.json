@@ -1,0 +1,35 @@
+{
+  "name": "dialog",
+  "version": "1.0.0",
+  "description": "react dialog component",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XShinei/Dialog.git"
+  },
+  "keywords": [
+    "dialog",
+    "react",
+    "typescript"
+  ],
+  "author": "xshinei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XShinei/Dialog/issues"
+  },
+  "homepage": "https://github.com/XShinei/Dialog#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
