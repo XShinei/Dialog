@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Mask = props => {
-    return (
-        <div className="rc-dialog-mask"/>
-    );
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Mask: React.FC = (props) => {
+  return <div className='rc-dialog-mask'></div>;
 };
 
 export default Mask;
